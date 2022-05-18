@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Bookmarks View Controller-->
+        <scene sceneID="i0m-iF-p80">
+            <objects>
+                <viewController storyboardIdentifier="BookmarksViewController" id="F2H-rH-Lsj" customClass="BookmarksViewController" customModule="Tonight_s_Movie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2ev-QE-M02">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TnI-yq-KVi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="4" id="ikQ-Jv-3PF">
+                                    <size key="itemSize" width="106" height="159"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Empty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJf-Kf-P8e">
+                                <rect key="frame" x="163" y="395.66666666666669" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cJf-Kf-P8e" firstAttribute="centerY" secondItem="2ev-QE-M02" secondAttribute="centerY" id="7Y1-4B-UsI"/>
+                            <constraint firstItem="TnI-yq-KVi" firstAttribute="top" secondItem="2ev-QE-M02" secondAttribute="top" id="BYt-TN-HMG"/>
+                            <constraint firstItem="cJf-Kf-P8e" firstAttribute="width" relation="lessThanOrEqual" secondItem="2ev-QE-M02" secondAttribute="width" constant="32" id="Cd1-dt-2rn"/>
+                            <constraint firstItem="cJf-Kf-P8e" firstAttribute="centerX" secondItem="2ev-QE-M02" secondAttribute="centerX" id="GNO-tz-avq"/>
+                            <constraint firstItem="TnI-yq-KVi" firstAttribute="leading" secondItem="Fhz-5B-qaF" secondAttribute="leading" id="KB0-np-Zgv"/>
+                            <constraint firstAttribute="bottom" secondItem="TnI-yq-KVi" secondAttribute="bottom" id="UYn-id-GpJ"/>
+                            <constraint firstItem="Fhz-5B-qaF" firstAttribute="trailing" secondItem="TnI-yq-KVi" secondAttribute="trailing" id="pKS-Vy-RL0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fhz-5B-qaF"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="TnI-yq-KVi" id="fDd-oB-qKJ"/>
+                        <outlet property="emptyStateLabel" destination="cJf-Kf-P8e" id="OPO-Wb-xfI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FyU-Lz-LgX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7.2000000000000002" y="146.30541871921181"/>
+        </scene>
+    </scenes>
+</document>
